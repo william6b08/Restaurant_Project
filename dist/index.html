@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Project</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Project</title>
+    <script src="menu.bundle.js"></script>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      body{
+        margin: 0;
+      }
+      
+      .Tab-list{
+        margin:0;
+        padding: 0;
+        display: flex;
+        width: 100vw;
+        max-width: 1080px;
+        height: 3rem;
+        justify-content: space-between;
+        align-items: center;
+        background: url("../src/header.jpg") no-repeat center;
+      }
+      
+      .Tab-list > li{
+        display: inline;
+        font-size: 2rem;
+        font-weight: bold;
+        background-color: bisque;
+        border-radius: 0 1rem;
+        
+      }
+      
+      .Menu-container{
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+      }
+
+      .menuItem{
+        padding: 1rem;
+      }
+
+      .menuItem > *{
+        width: 300px;
+      }
+      </style>
 </head>
 <body>
-  <script src="main.js"></script>
-  <img src="../src/header.jpg" alt="Header" style="width: 100vw">
+  <script src="index.bundle.js" defer></script>
+  <header>
+    <nav>
+      <ul class="Tab-list">
+        <li id="About">About</li>
+        <li id="Menu">Menu</li>
+        <li id="Contact-us">Contact Us</li>
+        <li id="Extras">Extras</li>
+      </ul>
+      </nav>
+      <div id="main-content"></div>
+    </header>
 </body>
 </html>

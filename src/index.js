@@ -1,1 +1,5 @@
-console.log("This is a testing")
+import generateMenu from "./menu";
+
+const menuBtn = document.getElementById('Menu');
+
+menuBtn.onclick = generateMenu;
