@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Project</title>
     <script src="menu.bundle.js"></script>
+    <script src="about.bundle.js"></script>
     <style>
       *{
         box-sizing: border-box;
@@ -37,11 +38,11 @@
       
       .Menu-container{
         display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: repeat(autofill, minmax(200px, 1fr));
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
       }
 
       .menuItem{
+        border: 5px soild black;
         padding: 1rem;
       }
 
